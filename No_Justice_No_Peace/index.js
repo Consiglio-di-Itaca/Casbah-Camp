@@ -3,6 +3,7 @@
     var selectors = {
       id: $(this),
       item: $(this).find(".timeline-item"),
+      listItems: $(this).find("li"),
       activeClass: "timeline-item--active",
       img: ".timeline__img",
     };
@@ -34,6 +35,14 @@
           selectors.item.removeClass(selectors.activeClass);
           $(this).addClass(selectors.activeClass);
         }
+      });
+    });
+    selectors.listItems.each(function () {
+      $(this).hover(function () {
+        selectors.id.css(
+          "background-image",
+          "url(" + $(this).data().bgimage + ")"
+        );
       });
     });
   };

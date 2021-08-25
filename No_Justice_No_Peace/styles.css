@@ -211,7 +211,10 @@ body {
   -webkit-transition: 0.3s ease 0s;
   transition: 0.3s ease 0s;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #272727;
 }
 
 .timeline-container:before {
