@@ -11,6 +11,14 @@ $heading-font: "Dela Gothic One", sans-serif;
 $timeline-width: 700px;
 $timeline-container-width: 100%;
 
+@font-face {
+  font-family: "Aaron's Hand";
+  src: url("font/AaronHand.ttf") format("ttf"),
+    url("font/AaronHand.woff") format("woff"),
+    url("font/AaronHand.woff2") format("woff2"),
+    url("font/AaronHand.eot") format("eot"),
+    url("/font/AaronHand.svg") format("svg");
+}
 body {
   margin: 0;
   padding: 0;
@@ -35,18 +43,22 @@ body {
     background-color: #272727;
     &__title {
       color: #fff;
-      font-size: 46px;
+      font-size: 4em;
       font-family: $heading-font;
       font-weight: normal;
       margin: 0;
+      span {
+        color: #ff6527;
+      }
     }
     &__subtitle {
       color: rgba(255, 255, 255, 0.5);
-      font-family: $content-font;
-      font-size: 16px;
+      font-family: "Aaron's Hand";
+      font-size: 1.6em;
       letter-spacing: 2px;
       margin: 10px 0 0 0;
       font-weight: normal;
+      text-transform: uppercase;
       & b {
         color: #fff;
       }
